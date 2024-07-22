@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione sulle Funzioni in C#</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lezione sulle Funzioni in C#</h1>
+        <p>Impara a creare e utilizzare le funzioni con un tocco di magia Disney!</p>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Le funzioni sono blocchi di codice che eseguono istruzioni. Sono come delle “ricette” magiche che possiamo riutilizzare.</p>
+        </section>
+        <section id="example1">
+            <h2>Esempio di Funzione Semplice</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta()
+    {
+        Console.WriteLine("Ciao, benvenuto!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta();
+    }
+}
+            </code></pre>
+        </section>
+        <section id="example2">
+            <h2>Funzione con Parametri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta(string nome)
+    {
+        Console.WriteLine("Ciao, " + nome + "!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta("Marco");
+    }
+}
+            </code></pre>
+        </section>
+        <section id="example3">
+            <h2>Esercizio: Somma di Due Numeri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static int Somma(int a, int b)
+    {
+        return a + b;
+    }
+    
+    static void Main(string[] args)
+    {
+        int risultato = Somma(3, 4);
+        Console.WriteLine("La somma è: " + risultato);
+    }
+}
+            </code></pre>
+        </section>
+    </main>
+    <footer>
+        <p>Creato con un pizzico di magia Disney!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

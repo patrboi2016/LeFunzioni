@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione sulle Funzioni nei linguaggi di programmazione</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lezione sulle Funzioni nei linguaggi di programmazione</h1>
+        <p>Impara a creare e utilizzare le funzioni</p>
+    </header>
+    <main>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Le funzioni sono blocchi di codice che eseguono istruzioni. Sono come delle “ricette” che possiamo riutilizzare.</p>
+        </section>
+       
+            <h2>Sommario</h2>
+            <img src="images/image_1_80.png" alt="Sommario">
+        </section>
+        <section class="slide-section">
+            <h2>Buongiorno ragazzi!</h2>
+            <p>Oggi parliamo di un argomento fondamentale nella programmazione: le funzioni. Vedremo insieme cosa sono, come si usano e perché sono così importanti.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Immaginate di dover cucinare una torta. La ricetta è come una funzione: un insieme di istruzioni che eseguite passo passo vi portano a un risultato. Allo stesso modo, una funzione in programmazione è un blocco di codice che esegue un'operazione specifica e può essere eseguita in diverse parti del programma senza dover riscrivere il codice.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Risolvere Problemi Complessi</h2>
+            <p>Ogni programma per computer è progettato per risolvere un problema in modo automatizzato. Quando il problema è complesso, può essere utile dividerlo in sottoproblemi più semplici da risolvere. Ogni sottoproblema viene tradotto e risolto con un codice realizzato con un linguaggio di programmazione.</p>
+            <img src="images/image_7_122.png" alt="Lo Sviluppo Top-Down">
+        </section>
+        <section class="slide-section">
+            <h2>Lo Sviluppo Top-Down</h2>
+            <p>Lo sviluppo top-down consiste nel suddividere un programma in sottoprogrammi più semplici da realizzare. Nei linguaggi di programmazione, i sottoprogrammi sono rappresentati attraverso le funzioni.</p>
+            
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi Generale delle Funzioni</h2>
+            <pre><code>
+tipoDatoRestituito nomeFunzione (elenco dei parametri) 
+{
+    istruzioni;
+    return valoreRestituito;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione</h2>
+            <p>La funzione è un sotto-programma che riceve valori (argomenti in ingresso) e restituisce un valore come risultato.</p>
+            <img src="images/image_11_156.png" alt="Diagramma di una funzione che riceve valori e restituisce un risultato">
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione</h2>
+            <p>Questa immagine rappresenta uno schema di un programma diviso in sotto-programmi (funzioni). Ciascuna funzione ha uno scopo distinto: la funzione che organizza la festa è divisa in 3 sotto-programmi (funzioni):</p>
+            <ul>
+                <li>La funzione che crea l’elenco degli invitati</li>
+                <li>La funzione che sceglie il tema della festa</li>
+                <li>La funzione che calcola il numero di torte</li>
+            </ul>
+            <p>Le funzioni: <code>CreaElencoInvitati()</code>, <code>ScegliTemaFesta()</code> e <code>CalcolaNumeroInvitati()</code> svolgono il loro compito e poi restituiscono il risultato ottenuto alla funzione principale (<code>OrganizzaFesta()</code>).</p>
+            <img src="images/image_14_186.png" alt="Schema di un programma diviso in funzioni">
+        </section>
+        <section class="slide-section">
+            <h2>Tipi di Dati</h2>
+            <p>In informatica, un nome, una frase o un intero capitolo vengono indicati con il termine “stringa” di caratteri. </p><p>Il numero degli invitati è un numero intero (1, 2, 3, ...). Un numero intero nei linguaggi di programmazione viene indicato con la parola <code>int</code>.</p><p> I numeri, i caratteri, le stringhe, le liste, i valori booleani (vero e falso), ecc., sono tipi di dati.</p>
+            <!--<img src="images/image_15_194.png" alt="Esempi di tipi di dati">-->
+        </section>
+        <section class="slide-section">
+            <h2>Come si scrive la definizione di una Funzione</h2>
+            <p>Vediamo l’esempio di una funzione che calcola il prodotto di due numeri:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+            <img src="images/image_10_1.png" alt="Esempio di funzione">
+        </section>
+        <section  class="slide-section"> <img src="images/Presentazione senza titolo (26).jpg" alt="Esempio di funzione"> </section>
+        <section  class="slide-section"> <img src="images/Presentazione senza titolo (27).jpg" alt="Esempio di funzione"> </section>       
+        <section class="slide-section">
+            <h2>impariamo a distinguere:            </h2>
+            <p>Restituire un risultato e visualizzarlo sullo schermo SONO DUE COSE DIVERSE.</p>
+            <p>RESTITUIRE UN RISULTATO SIGNIFICA RENDERLO DISPONIBILE PER LE ALTRE FUNZIONI</p>
+            </section>
+            <section class="slide-section">
+                <p> Se il tipo restituito dalla funzione non è specificato, si assume, in mancanza (per default), che il tipo sia int
+                </p>
+                </section>
+                <section  class="slide-section">  <h2>Il Tipo void</h2>
+            <p>Una funzione di tipo <code>void</code> non restituisce alcun risultato alla funzione principale dove viene eseguita. Il risultato della funzione <code>void</code> non è reso disponibile per le altre funzioni del programma.</p>
+            <img src="images/image_11_1.png" alt="Il tipo void">
+        </section>
+        <section class="slide-section">
+            <h2>L'elenco dei Parametri</h2>
+            <p>Ecco la sintassi generale per la definizione di una funzione:</p>
+            <pre><code>
+tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
+    istruzioni;
+}
+            </code></pre>
+            <img src="images/image_12_1.png" alt="Sintassi dell'elenco dei parametri">
+        </section>
+        <section class="slide-section">
+            <h2>Esempio: funzione di tipo "void"</h2>
+            <p>Il programma rappresenta la definizione di una funzione:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int  P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+            <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
+            <p>Questa funzione NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. </p> 
+            <p> Essa visualizza il risultato sullo schermo grazie all'istruzione <code> cout << P << endl;</code></p>                  </section>
+        <section class="slide-section">
+            <h2>L'istruzione "return"</h2>
+            <pre><code>
+int Prodotto (int a, int b) {
+    int P;    
+    P = a * b;
+    return P;
+}
+            </code></pre>           
+            <p>Questa funzione restituisce un risultato numerico di tipo intero.</p>
+            <p> Questo grazie a due precisazioni:</p>
+            <ul> 
+            <li> La parola "int" indicata nell'intestazione della funzione </li>
+            <li>L'istruzione return P</li>
+        </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Domande</h2>
+            <p>Adesso che hai appreso il significato di <code>void</code> e il modo in cui viene costruita una funzione, considera il seguente codice e rispondi alle domande successive:</p>
+            <pre><code>
+void Stampa() {
+    cout << "stampa di prova" << endl;
+    cout << "fine della funzione" << endl;
+}
+            </code></pre>
+            <p>Cosa rappresenta il codice della slide precedente?</p>
+            <ul>
+                <li>una funzione</li>
+                <li>una variabile</li>
+            </ul>
+            <p>Cosa significa “<code>void</code>” nell’intestazione: <code>void Stampa ()</code>?</p>
+            <p>Ti ricordo che <code>cout << </code> significa “visualizza sullo schermo”. L’istruzione <code>cout << "stampa di prova"</code> serve per visualizzare sullo schermo il messaggio: "stampa di prova".</p>
+            <img src="images/image_16_1.png" alt="Domande sulla funzione Stampa">
+        </section>
+        <section class="slide-section">
+            <h2>La Chiamata di una Funzione</h2>
+            <p>“Chiamare” una funzione significa eseguirla. Per eseguire una funzione basta utilizzare la seguente sintassi:</p>
+            <pre><code>
+nomeFunzione(elenco dei valori da passare ai parametri);
+            </code></pre>
+            <p>In pratica viene eseguita come se fosse un semplice comando. Al momento della chiamata, il compilatore esegue il controllo di corrispondenza tra i parametri specificati nella definizione della funzione e i valori passati alla funzione.</p>
+            <img src="images/image_17_1.png" alt="La chiamata di una funzione">
+        </section>
+        <section class="slide-section">
+            <h2>Funzione Somma</h2>
+            <p>Nel seguente codice è presente:</p>
+            <ul>
+                <li>la dichiarazione delle variabili <code>totale</code>, <code>subtot1</code> e <code>subtot2</code></li>
+                <li>la chiamata della funzione <code>Somma</code></li>
+                <li>l’assegnazione del risultato della funzione <code>Somma</code> alla variabile <code>totale</code></li>
+            </ul>
+            <pre><code>
+int totale;
+int subtot1;
+int subtot2;
+...
+totale = Somma(subtot1, subtot2);
+...
+            </code></pre>
+            <p>Che tipo di risultato (dato) viene restituito dalla funzione <code>Somma</code>?</p>
+            <ul>
+                <li>numerico</li>
+                <li>stringa</li>
+            </ul>
+            <img src="images/image_18_1.png" alt="Funzione Somma">
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione Main</h2>
+            <p>È la funzione che viene eseguita per prima all'avvio del programma. Nella main direttamente o indirettamente vengono chiamate tutte le altre funzioni.</p>
+            <img src="images/image_19_1.png" alt="La funzione Main">
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Globale</h2>
+            <p>Definizione: Una variabile globale è una variabile dichiarata al di fuori di qualsiasi funzione, metodo, costruttore o blocco. È accessibile e modificabile da qualsiasi parte del programma.</p>
+            <p>Utilizzo: Le variabili globali vengono utilizzate quando è necessario mantenere uno stato o condividere dati tra diverse parti di un programma senza dover passare i dati come argomenti di funzione.</p>
+            <img src="images/image_23_1.png" alt="Variabile globale">
+        </section>
+        <section class="slide-section">
+            <h2>Le Variabili Globali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Facilita la condivisione di dati tra funzioni e moduli.</li>
+                        <li>Riduce la necessità di passare parametri tra funzioni.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Può portare a conflitti di nome e difficoltà nel debug.</li>
+                        <li>Rende il codice meno modulare e più difficile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="images/image_24_1.png" alt="Vantaggi e svantaggi delle variabili globali">
+        </section>    
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Locale</h2>
+            <p>Definizione: Una variabile locale è una variabile che è accessibile solo all'interno della funzione, metodo o blocco in cui è stata dichiarata.</p>
+            <p>Ambito di Applicazione: Le variabili locali sono dichiarate all'interno di funzioni, metodi o blocchi e sono visibili solo in quell'ambito.</p>
+            <img src="images/image_26_1.png" alt="Variabile locale">
+        </section>
+        <section class="slide-section">
+            <h2>Vantaggi e Svantaggi delle Variabili Locali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Migliorano la modularità del codice e riducono il rischio di conflitti di nomi poiché la loro visibilità è limitata.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Non possono essere utilizzate al di fuori del loro ambito di dichiarazione, il che richiede di passare i dati tramite parametri se necessario.</li>
+                    </ul>
+                </li>
+                <li>Best Practice:
+                    <ul>
+                        <li>È consigliato utilizzare variabili locali il più possibile per mantenere il codice organizzato e facile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="images/image_27_1.png" alt="Vantaggi e svantaggi delle variabili locali">
+        </section>
+    </main>
+    <footer>
+        <p>Sito realizzato da Patrizia Boi</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione sulle Funzioni in C#</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lezione sulle Funzioni in C#</h1>
+        <p>Impara a creare e utilizzare le funzioni con un tocco di magia Disney!</p>
+    </header>
+    <main>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Le funzioni sono blocchi di codice che eseguono istruzioni. Sono come delle “ricette” magiche che possiamo riutilizzare.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione Semplice</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta()
+    {
+        Console.WriteLine("Ciao, benvenuto!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta();
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione con Parametri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta(string nome)
+    {
+        Console.WriteLine("Ciao, " + nome + "!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta("Marco");
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Esercizio: Somma di Due Numeri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static int Somma(int a, int b)
+    {
+        return a + b;
+    }
+    
+    static void Main(string[] args)
+    {
+        int risultato = Somma(3, 4);
+        Console.WriteLine("La somma è: " + risultato);
+    }
+}
+            </code></pre>
+        </section>
+    -->
+        <!-- Slide Sections 
+        <section class="slide-section">
+            <h2>Abilità</h2>
+            <ul>
+                <li>Controllare la complessità degli algoritmi organizzando il programma in moduli</li>
+                <li>Organizzare i dati in strutture e implementare gli algoritmi per la loro gestione</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Sommario</h2>
+            <ul>
+                <li>Lo sviluppo top-down</li>
+                <li>Le funzioni</li>
+                <li>Funzioni con parametri</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Buongiorno ragazzi!</h2>
+            <p>Oggi parliamo di un argomento fondamentale nella programmazione: le funzioni e le strutture di dati. Vedremo insieme cosa sono, come si usano e perché sono così importanti.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Immaginate di dover cucinare una torta. La ricetta è come una funzione: un insieme di istruzioni che eseguite passo passo vi portano a un risultato. Allo stesso modo, una funzione in programmazione è un blocco di codice che esegue un'operazione specifica e può essere eseguita in diverse parti del programma senza dover riscrivere il codice.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Risolvere Problemi Complessi</h2>
+            <p>Ogni programma per computer è progettato per risolvere un problema in modo automatizzato. Quando il problema è complesso, può essere utile dividerlo in sottoproblemi più semplici da risolvere. Ogni sottoproblema viene tradotto e risolto con un codice realizzato con un linguaggio di programmazione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Lo Sviluppo Top-Down</h2>
+            <p>Lo sviluppo top-down consiste nel suddividere un programma in sottoprogrammi più semplici da realizzare. Nei linguaggi di programmazione, i sottoprogrammi sono rappresentati attraverso le funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi Generale delle Funzioni</h2>
+            <pre><code>
+tipoDatoRestituito nomeFunzione (elenco dei parametri) 
+{
+    istruzioni;
+    return valore restituito;
+}
+            </code></pre>
+            <img src="images/sintassi-generale.png" alt="Sintassi generale di una funzione">
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione</h2>
+            <p>La funzione è un sotto-programma che riceve valori (argomenti in ingresso) e restituisce un valore come risultato.</p>
+            <img src="images/function-diagram.png" alt="Diagramma di una funzione che riceve valori e restituisce un risultato">
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione</h2>
+            <p>Questa immagine rappresenta uno schema di un programma diviso in sotto-programmi (funzioni). Ciascuna funzione ha uno scopo distinto: la funzione che organizza la festa è divisa in 3 sotto-programmi (funzioni):</p>
+            <ul>
+                <li>La funzione che crea l’elenco degli invitati</li>
+                <li>La funzione che sceglie il tema della festa</li>
+                <li>La funzione che calcola il numero di torte</li>
+            </ul>
+            <p>Le funzioni: <code>CreaElencoInvitati()</code>, <code>ScegliTemaFesta()</code> e <code>CalcolaNumeroInvitati()</code> svolgono il loro compito e poi restituiscono il risultato ottenuto alla funzione principale (<code>OrganizzaFesta()</code>).</p>
+            <img src="images/function-example.png" alt="Schema di un programma diviso in funzioni">
+        </section>
+        <section class="slide-section">
+            <h2>Tipi di Dati</h2>
+            <p>In informatica, un nome, una frase o un intero capitolo vengono indicati con il termine “stringa” di caratteri. Il numero degli invitati è un numero intero (1, 2, 3, ...). Un numero intero nei linguaggi di programmazione viene indicato con la parola <code>int</code>. I numeri, i caratteri, le stringhe, le liste, i valori booleani (vero e falso), ecc., sono tipi di dati.</p>
+            <img src="images/data-types.png" alt="Esempi di tipi di dati">
+        </section>
+        <section class="slide-section">
+            <h2>Come si Scrive una Funzione</h2>
+            <p>Vediamo l’esempio di una funzione che calcola il prodotto di due numeri:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Il Tipo void</h2>
+            <p>Se il tipo restituito dalla funzione non è specificato, si assume che il tipo sia <code>int</code> per default.</p>
+            <p>Una funzione di tipo <code>void</code> non restituisce alcun risultato alla funzione principale dove viene eseguita. Il risultato della funzione <code>void</code> non è reso disponibile per le altre funzioni del programma.</p>
+        </section>
+        <section class="slide-section">
+            <h2>L'elenco dei Parametri</h2>
+            <p>Ecco la sintassi generale per la definizione di una funzione:</p>
+            <pre><code>
+tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
+    istruzioni;
+}
+            </code></pre>
+            <img src="images/elenco-parametri.png" alt="Sintassi dell'elenco dei parametri">
+        </section>
+        <section class="slide-section">
+            <h2>I Parametri di Tipo void</h2>
+            <p><code>void f(void)</code> o <code>void f()</code> indica che nessun parametro viene passato alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione StampaProdotto</h2>
+            <p>Il programma rappresenta la definizione di una funzione:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+            <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi delle Funzioni</h2>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+
+int Prodotto (int a, int b) {
+    int P;    
+    P = a * b;
+    return P;
+}
+            </code></pre>
+            <p>Le mele intere rappresentano i parametri <code>a</code> e <code>b</code>. Il risultato <code>P</code> non viene reso disponibile per le altre funzioni bensì viene visualizzato sullo schermo.</p>
+            <img src="images/sintassi-funzioni.png" alt="Sintassi delle funzioni">
+        </section>
+        <section class="slide-section">
+            <h2>Differenze tra Funzioni</h2>
+            <p>La funzione <code>int Prodotto (int a, int b)</code> restituisce un risultato numerico di tipo intero.</p>
+            <p>La funzione <code>void StampaProdotto (int a, int b)</code> NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. Tuttavia, può visualizzare il risultato sullo schermo.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Domande</h2>
+            <p>Adesso che hai appreso il significato di <code>void</code> e il modo in cui viene costruita una funzione, considera il seguente codice e rispondi alle domande successive:</p>
+            <pre><code>
+void Stampa() {
+    cout << "stampa di prova" << endl;
+    cout << "fine della funzione" << endl;
+}
+            </code></pre>
+            <p>Cosa rappresenta il codice della slide precedente?</p>
+            <ul>
+                <li>una funzione</li>
+                <li>una variabile</li>
+            </ul>
+            <p>Cosa significa “<code>void</code>” nell’intestazione: <code>void Stampa ()</code>?</p>
+            <p>Ti ricordo che <code>cout <<</code> significa “visualizza sullo schermo”. L’istruzione <code>cout << "stampa di prova"</code> serve per visualizzare sullo schermo il messaggio: "stampa di prova".</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Chiamata di una Funzione</h2>
+            <p>“Chiamare” una funzione significa eseguirla. Per eseguire una funzione basta utilizzare la seguente sintassi:</p>
+            <pre><code>
+nomeFunzione(elenco dei valori da passare ai parametri);
+            </code></pre>
+            <p>In pratica viene eseguita come se fosse un semplice comando. Al momento della chiamata, il compilatore esegue il controllo di corrispondenza tra i parametri specificati nella definizione della funzione e i valori passati alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione Somma</h2>
+            <p>Nel seguente codice è presente:</p>
+            <ul>
+                <li>la dichiarazione delle variabili <code>totale</code>, <code>subtot1</code> e <code>subtot2</code></li>
+                <li>la chiamata della funzione <code>Somma</code></li>
+                <li>l’assegnazione del risultato della funzione <code>Somma</code> alla variabile <code>totale</code></li>
+            </ul>
+            <pre><code>
+int totale;
+int subtot1;
+int subtot2;
+...
+totale = Somma(subtot1, subtot2);
+...
+            </code></pre>
+            <p>Che tipo di risultato (dato) viene restituito dalla funzione <code>Somma</code>?</p>
+            <ul>
+                <li>numerico</li>
+                <li>stringa</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione Main</h2>
+            <p>È la funzione che viene eseguita per prima all'avvio del programma. Nella main direttamente o indirettamente vengono chiamate tutte le altre funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio 1</h2>
+            <p>CHE COSA IMPARERAI CON QUESTO ESEMPIO:</p>
+            <ul>
+                <li>Organizzare un programma in sottoprogrammi individuando i moduli funzionalmente indipendenti</li>
+                <li>Utilizzare le funzioni del linguaggio C#</li>
+            </ul>
+            <p>Per esempio, immaginate di dover sviluppare un gioco di quiz in cui il giocatore deve rispondere a domande a scelta multipla.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzioni del Gioco</h2>
+            <ul>
+                <li>Funzione <code>IniziaGioco()</code>: Questa funzione può essere utilizzata per impostare il gioco, inizializzare le variabili e mostrare un messaggio di benvenuto.</li>
+                <li>Funzione <code>RiceviRisposta()</code>: Questa funzione attende che l'utente inserisca una risposta e la restituisce.</li>
+                <li>Funzione <code>AggiornaPunteggio(ref int punteggio, bool esatto)</code>: Aggiorna il punteggio dell'utente in base alla correttezza della risposta.</li>
+                <li>Funzione <code>FineGioco(int punteggio)</code>: Visualizza il punteggio finale e conclude il gioco.</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione</h2>
+            <p><code>IniziaGioco()</code>: FUNZIONE che avvia il gioco (implementazione non mostrata).</p>
+            <p><code>int punteggio = 0;</code>: Dichiarazione e inizializzazione della variabile punteggio.</p>
+            <p><code>MostraDomanda(0);</code>: FUNZIONE Mostra la prima domanda (implementazione non mostrata).</p>
+            <p><code>string risposta = RiceviRisposta();</code>: DICHIARAZIONE DELLA VARIABILE RISPOSTA CHIAMATA DELLA FUNZIONE <code>RiceviRisposta();</code>: IL CUI RISULTATO VIENE ASSEGNATO (<code>=</code>) ALLA VARIABILE risposta.</p>
+            <p>Questo esempio dimostra come usare e aggiornare una variabile globale senza l'utilizzo di un ciclo <code>for</code>.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Globale</h2>
+            <p>Definizione: Una variabile globale è una variabile dichiarata al di fuori di qualsiasi funzione, metodo, costruttore o blocco. È accessibile e modificabile da qualsiasi parte del programma.</p>
+            <p>Utilizzo: Le variabili globali vengono utilizzate quando è necessario mantenere uno stato o condividere dati tra diverse parti di un programma senza dover passare i dati come argomenti di funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Le Variabili Globali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Facilita la condivisione di dati tra funzioni e moduli.</li>
+                        <li>Riduce la necessità di passare parametri tra funzioni.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Può portare a conflitti di nome e difficoltà nel debug.</li>
+                        <li>Rende il codice meno modulare e più difficile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione del Codice</h2>
+            <p>Dichiarazione della Variabile Globale:</p>
+            <pre><code>
+static int punteggio = 0;
+            </code></pre>
+            <p>La variabile punteggio è dichiarata come statica e inizializzata a 0.</p>
+            <p>Utilizzo nel Metodo Main:</p>
+            <pre><code>
+Console.WriteLine("Valore iniziale del punteggio: " + punteggio);
+IncrementaPunteggio();
+Console.WriteLine("Valore del punteggio dopo incremento: " + punteggio);
+            </code></pre>
+            <p>Metodo per Incrementare il Punteggio:</p>
+            <pre><code>
+static void IncrementaPunteggio() {
+    punteggio++;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Locale</h2>
+            <p>Definizione: Una variabile locale è una variabile che è accessibile solo all'interno della funzione, metodo o blocco in cui è stata dichiarata.</p>
+            <p>Ambito di Applicazione: Le variabili locali sono dichiarate all'interno di funzioni, metodi o blocchi e sono visibili solo in quell'ambito.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Vantaggi e Svantaggi delle Variabili Locali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Migliorano la modularità del codice e riducono il rischio di conflitti di nomi poiché la loro visibilità è limitata.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Non possono essere utilizzate al di fuori del loro ambito di dichiarazione, il che richiede di passare i dati tramite parametri se necessario.</li>
+                    </ul>
+                </li>
+                <li>Best Practice:
+                    <ul>
+                        <li>È consigliato utilizzare variabili locali il più possibile per mantenere il codice organizzato e facile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Creato con un pizzico di magia Disney!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione sulle Funzioni in C#</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lezione sulle Funzioni in C#</h1>
+        <p>Impara a creare e utilizzare le funzioni con un tocco di magia Disney!</p>
+    </header>
+    <main>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Le funzioni sono blocchi di codice che eseguono istruzioni. Sono come delle “ricette” magiche che possiamo riutilizzare.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione Semplice</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta()
+    {
+        Console.WriteLine("Ciao, benvenuto!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta();
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione con Parametri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta(string nome)
+    {
+        Console.WriteLine("Ciao, " + nome + "!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta("Marco");
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Esercizio: Somma di Due Numeri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static int Somma(int a, int b)
+    {
+        return a + b;
+    }
+    
+    static void Main(string[] args)
+    {
+        int risultato = Somma(3, 4);
+        Console.WriteLine("La somma è: " + risultato);
+    }
+}
+            </code></pre>
+        </section>
+     Slide Sections 
+        <section class="slide-section">
+            <h2>Abilità</h2>
+            <ul>
+                <li>Controllare la complessità degli algoritmi organizzando il programma in moduli</li>
+                <li>Organizzare i dati in strutture e implementare gli algoritmi per la loro gestione</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Sommario</h2>
+            <ul>
+                <li>Lo sviluppo top-down</li>
+                <li>Le funzioni</li>
+                <li>Funzioni con parametri</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Buongiorno ragazzi!</h2>
+            <p>Oggi parliamo di un argomento fondamentale nella programmazione: le funzioni e le strutture di dati. Vedremo insieme cosa sono, come si usano e perché sono così importanti.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Immaginate di dover cucinare una torta. La ricetta è come una funzione: un insieme di istruzioni che eseguite passo passo vi portano a un risultato. Allo stesso modo, una funzione in programmazione è un blocco di codice che esegue un'operazione specifica e può essere eseguita in diverse parti del programma senza dover riscrivere il codice.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Risolvere Problemi Complessi</h2>
+            <p>Ogni programma per computer è progettato per risolvere un problema in modo automatizzato. Quando il problema è complesso, può essere utile dividerlo in sottoproblemi più semplici da risolvere. Ogni sottoproblema viene tradotto e risolto con un codice realizzato con un linguaggio di programmazione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Lo Sviluppo Top-Down</h2>
+            <p>Lo sviluppo top-down consiste nel suddividere un programma in sottoprogrammi più semplici da realizzare. Nei linguaggi di programmazione, i sottoprogrammi sono rappresentati attraverso le funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi Generale delle Funzioni</h2>
+            <pre><code>
+tipoDatoRestituito nomeFunzione (elenco dei parametri) 
+{
+    istruzioni;
+    return valore restituito;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione</h2>
+            <p>La funzione è un sotto-programma che riceve valori (argomenti in ingresso) e restituisce un valore come risultato.</p>
+            <img src="images/function-diagram.png" alt="Diagramma di una funzione che riceve valori e restituisce un risultato">
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione</h2>
+            <p>Questa immagine rappresenta uno schema di un programma diviso in sotto-programmi (funzioni). Ciascuna funzione ha uno scopo distinto: la funzione che organizza la festa è divisa in 3 sotto-programmi (funzioni):</p>
+            <ul>
+                <li>La funzione che crea l’elenco degli invitati</li>
+                <li>La funzione che sceglie il tema della festa</li>
+                <li>La funzione che calcola il numero di torte</li>
+            </ul>
+            <p>Le funzioni: <code>CreaElencoInvitati()</code>, <code>ScegliTemaFesta()</code> e <code>CalcolaNumeroInvitati()</code> svolgono il loro compito e poi restituiscono il risultato ottenuto alla funzione principale (<code>OrganizzaFesta()</code>).</p>
+        </section>
+        <section class="slide-section">
+            <h2>Tipi di Dati</h2>
+            <p>In informatica, un nome, una frase o un intero capitolo vengono indicati con il termine “stringa” di caratteri. Il numero degli invitati è un numero intero (1, 2, 3, ...). Un numero intero nei linguaggi di programmazione viene indicato con la parola <code>int</code>. I numeri, i caratteri, le stringhe, le liste, i valori booleani (vero e falso), ecc., sono tipi di dati.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Come si Scrive una Funzione</h2>
+            <p>Vediamo l’esempio di una funzione che calcola il prodotto di due numeri:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Il Tipo void</h2>
+            <p>Se il tipo restituito dalla funzione non è specificato, si assume che il tipo sia <code>int</code> per default.</p>
+            <p>Una funzione di tipo <code>void</code> non restituisce alcun risultato alla funzione principale dove viene eseguita. Il risultato della funzione <code>void</code> non è reso disponibile per le altre funzioni del programma.</p>
+        </section>
+        <section class="slide-section">
+            <h2>L'elenco dei Parametri</h2>
+            <p>Ecco la sintassi generale per la definizione di una funzione:</p>
+            <pre><code>
+tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
+    istruzioni;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>I Parametri di Tipo void</h2>
+            <p><code>void f(void)</code> o <code>void f()</code> indica che nessun parametro viene passato alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione StampaProdotto</h2>
+            <p>Il programma rappresenta la definizione di una funzione:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+            <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi delle Funzioni</h2>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+
+int Prodotto (int a, int b) {
+    int P;    
+    P = a * b;
+    return P;
+}
+            </code></pre>
+            <p>Le mele intere rappresentano i parametri <code>a</code> e <code>b</code>. Il risultato <code>P</code> non viene reso disponibile per le altre funzioni bensì viene visualizzato sullo schermo.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Differenze tra Funzioni</h2>
+            <p>La funzione <code>int Prodotto (int a, int b)</code> restituisce un risultato numerico di tipo intero.</p>
+            <p>La funzione <code>void StampaProdotto (int a, int b)</code> NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. Tuttavia, può visualizzare il risultato sullo schermo.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Domande</h2>
+            <p>Adesso che hai appreso il significato di <code>void</code> e il modo in cui viene costruita una funzione, considera il seguente codice e rispondi alle domande successive:</p>
+            <pre><code>
+void Stampa() {
+    cout << "stampa di prova" << endl;
+    cout << "fine della funzione" << endl;
+}
+            </code></pre>
+            <p>Cosa rappresenta il codice della slide precedente?</p>
+            <ul>
+                <li>una funzione</li>
+                <li>una variabile</li>
+            </ul>
+            <p>Cosa significa “<code>void</code>” nell’intestazione: <code>void Stampa ()</code>?</p>
+            <p>Ti ricordo che <code>cout <<</code> significa “visualizza sullo schermo”. L’istruzione <code>cout << "stampa di prova"</code> serve per visualizzare sullo schermo il messaggio: "stampa di prova".</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Chiamata di una Funzione</h2>
+            <p>“Chiamare” una funzione significa eseguirla. Per eseguire una funzione basta utilizzare la seguente sintassi:</p>
+            <pre><code>
+nomeFunzione(elenco dei valori da passare ai parametri);
+            </code></pre>
+            <p>In pratica viene eseguita come se fosse un semplice comando. Al momento della chiamata, il compilatore esegue il controllo di corrispondenza tra i parametri specificati nella definizione della funzione e i valori passati alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione Somma</h2>
+            <p>Nel seguente codice è presente:</p>
+            <ul>
+                <li>la dichiarazione delle variabili <code>totale</code>, <code>subtot1</code> e <code>subtot2</code></li>
+                <li>la chiamata della funzione <code>Somma</code></li>
+                <li>l’assegnazione del risultato della funzione <code>Somma</code> alla variabile <code>totale</code></li>
+            </ul>
+            <pre><code>
+int totale;
+int subtot1;
+int subtot2;
+...
+totale = Somma(subtot1, subtot2);
+...
+            </code></pre>
+            <p>Che tipo di risultato (dato) viene restituito dalla funzione <code>Somma</code>?</p>
+            <ul>
+                <li>numerico</li>
+                <li>stringa</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione Main</h2>
+            <p>È la funzione che viene eseguita per prima all'avvio del programma. Nella main direttamente o indirettamente vengono chiamate tutte le altre funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio 1</h2>
+            <p>CHE COSA IMPARERAI CON QUESTO ESEMPIO:</p>
+            <ul>
+                <li>Organizzare un programma in sottoprogrammi individuando i moduli funzionalmente indipendenti</li>
+                <li>Utilizzare le funzioni del linguaggio C#</li>
+            </ul>
+            <p>Per esempio, immaginate di dover sviluppare un gioco di quiz in cui il giocatore deve rispondere a domande a scelta multipla.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzioni del Gioco</h2>
+            <ul>
+                <li>Funzione <code>IniziaGioco()</code>: Questa funzione può essere utilizzata per impostare il gioco, inizializzare le variabili e mostrare un messaggio di benvenuto.</li>
+                <li>Funzione <code>RiceviRisposta()</code>: Questa funzione attende che l'utente inserisca una risposta e la restituisce.</li>
+                <li>Funzione <code>AggiornaPunteggio(ref int punteggio, bool esatto)</code>: Aggiorna il punteggio dell'utente in base alla correttezza della risposta.</li>
+                <li>Funzione <code>FineGioco(int punteggio)</code>: Visualizza il punteggio finale e conclude il gioco.</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione</h2>
+            <p><code>IniziaGioco()</code>: FUNZIONE che avvia il gioco (implementazione non mostrata).</p>
+            <p><code>int punteggio = 0;</code>: Dichiarazione e inizializzazione della variabile punteggio.</p>
+            <p><code>MostraDomanda(0);</code>: FUNZIONE Mostra la prima domanda (implementazione non mostrata).</p>
+            <p><code>string risposta = RiceviRisposta();</code>: DICHIARAZIONE DELLA VARIABILE RISPOSTA CHIAMATA DELLA FUNZIONE <code>RiceviRisposta();</code>: IL CUI RISULTATO VIENE ASSEGNATO (<code>=</code>) ALLA VARIABILE risposta.</p>
+            <p>Questo esempio dimostra come usare e aggiornare una variabile globale senza l'utilizzo di un ciclo <code>for</code>.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Globale</h2>
+            <p>Definizione: Una variabile globale è una variabile dichiarata al di fuori di qualsiasi funzione, metodo, costruttore o blocco. È accessibile e modificabile da qualsiasi parte del programma.</p>
+            <p>Utilizzo: Le variabili globali vengono utilizzate quando è necessario mantenere uno stato o condividere dati tra diverse parti di un programma senza dover passare i dati come argomenti di funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Le Variabili Globali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Facilita la condivisione di dati tra funzioni e moduli.</li>
+                        <li>Riduce la necessità di passare parametri tra funzioni.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Può portare a conflitti di nome e difficoltà nel debug.</li>
+                        <li>Rende il codice meno modulare e più difficile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione del Codice</h2>
+            <p>Dichiarazione della Variabile Globale:</p>
+            <pre><code>
+static int punteggio = 0;
+            </code></pre>
+            <p>La variabile punteggio è dichiarata come statica e inizializzata a 0.</p>
+            <p>Utilizzo nel Metodo Main:</p>
+            <pre><code>
+Console.WriteLine("Valore iniziale del punteggio: " + punteggio);
+IncrementaPunteggio();
+Console.WriteLine("Valore del punteggio dopo incremento: " + punteggio);
+            </code></pre>
+            <p>Metodo per Incrementare il Punteggio:</p>
+            <pre><code>
+static void IncrementaPunteggio() {
+    punteggio++;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Locale</h2>
+            <p>Definizione: Una variabile locale è una variabile che è accessibile solo all'interno della funzione, metodo o blocco in cui è stata dichiarata.</p>
+            <p>Ambito di Applicazione: Le variabili locali sono dichiarate all'interno di funzioni, metodi o blocchi e sono visibili solo in quell'ambito.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Vantaggi e Svantaggi delle Variabili Locali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Migliorano la modularità del codice e riducono il rischio di conflitti di nomi poiché la loro visibilità è limitata.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Non possono essere utilizzate al di fuori del loro ambito di dichiarazione, il che richiede di passare i dati tramite parametri se necessario.</li>
+                    </ul>
+                </li>
+                <li>Best Practice:
+                    <ul>
+                        <li>È consigliato utilizzare variabili locali il più possibile per mantenere il codice organizzato e facile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Creato con un pizzico di magia Disney!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+-->
+
+<!--<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione sulle Funzioni in C#</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lezione sulle Funzioni in C#</h1>
+        <p>Impara a creare e utilizzare le funzioni con un tocco di magia Disney!</p>
+    </header>
+    <main>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Le funzioni sono blocchi di codice che eseguono istruzioni. Sono come delle “ricette” magiche che possiamo riutilizzare.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione Semplice</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta()
+    {
+        Console.WriteLine("Ciao, benvenuto!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta();
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione con Parametri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static void Saluta(string nome)
+    {
+        Console.WriteLine("Ciao, " + nome + "!");
+    }
+    
+    static void Main(string[] args)
+    {
+        Saluta("Marco");
+    }
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Esercizio: Somma di Due Numeri</h2>
+            <pre><code>
+using System;
+
+class Program
+{
+    static int Somma(int a, int b)
+    {
+        return a + b;
+    }
+    
+    static void Main(string[] args)
+    {
+        int risultato = Somma(3, 4);
+        Console.WriteLine("La somma è: " + risultato);
+    }
+}
+            </code></pre>
+        </section>
+    -->
+       <!--   Slide Sections 
+        <section class="slide-section">
+            <h2>Abilità</h2>
+            <ul>
+                <li>Controllare la complessità degli algoritmi organizzando il programma in moduli</li>
+                <li>Organizzare i dati in strutture e implementare gli algoritmi per la loro gestione</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Sommario</h2>
+            <ul>
+                <li>Lo sviluppo top-down</li>
+                <li>Le funzioni</li>
+                <li>Funzioni con parametri</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Buongiorno ragazzi!</h2>
+            <p>Oggi parliamo di un argomento fondamentale nella programmazione: le funzioni e le strutture di dati. Vedremo insieme cosa sono, come si usano e perché sono così importanti.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Introduzione alle Funzioni</h2>
+            <p>Immaginate di dover cucinare una torta. La ricetta è come una funzione: un insieme di istruzioni che eseguite passo passo vi portano a un risultato. Allo stesso modo, una funzione in programmazione è un blocco di codice che esegue un'operazione specifica e può essere eseguita in diverse parti del programma senza dover riscrivere il codice.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Risolvere Problemi Complessi</h2>
+            <p>Ogni programma per computer è progettato per risolvere un problema in modo automatizzato. Quando il problema è complesso, può essere utile dividerlo in sottoproblemi più semplici da risolvere. Ogni sottoproblema viene tradotto e risolto con un codice realizzato con un linguaggio di programmazione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Lo Sviluppo Top-Down</h2>
+            <p>Lo sviluppo top-down consiste nel suddividere un programma in sottoprogrammi più semplici da realizzare. Nei linguaggi di programmazione, i sottoprogrammi sono rappresentati attraverso le funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi Generale delle Funzioni</h2>
+            <pre><code>
+tipoDatoRestituito nomeFunzione (elenco dei parametri) 
+{
+    istruzioni;
+    return valore restituito;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione</h2>
+            <p>La funzione è un sotto-programma che riceve valori (argomenti in ingresso) e restituisce un valore come risultato.</p>
+            <img src="images/function-diagram.png" alt="Diagramma di una funzione che riceve valori e restituisce un risultato">
+        </section>
+        <section class="slide-section">
+            <h2>Esempio di Funzione</h2>
+            <p>Questa immagine rappresenta uno schema di un programma diviso in sotto-programmi (funzioni). Ciascuna funzione ha uno scopo distinto: la funzione che organizza la festa è divisa in 3 sotto-programmi (funzioni):</p>
+            <ul>
+                <li>La funzione che crea l’elenco degli invitati</li>
+                <li>La funzione che sceglie il tema della festa</li>
+                <li>La funzione che calcola il numero di torte</li>
+            </ul>
+            <p>Le funzioni: <code>CreaElencoInvitati()</code>, <code>ScegliTemaFesta()</code> e <code>CalcolaNumeroInvitati()</code> svolgono il loro compito e poi restituiscono il risultato ottenuto alla funzione principale (<code>OrganizzaFesta()</code>).</p>
+            <img src="images/function-example.png" alt="Schema di un programma diviso in funzioni">
+        </section>
+        <section class="slide-section">
+            <h2>Tipi di Dati</h2>
+            <p>In informatica, un nome, una frase o un intero capitolo vengono indicati con il termine “stringa” di caratteri. Il numero degli invitati è un numero intero (1, 2, 3, ...). Un numero intero nei linguaggi di programmazione viene indicato con la parola <code>int</code>. I numeri, i caratteri, le stringhe, le liste, i valori booleani (vero e falso), ecc., sono tipi di dati.</p>
+            <img src="images/data-types.png" alt="Esempi di tipi di dati">
+        </section>
+        <section class="slide-section">
+            <h2>Come si Scrive una Funzione</h2>
+            <p>Vediamo l’esempio di una funzione che calcola il prodotto di due numeri:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Il Tipo void</h2>
+            <p>Se il tipo restituito dalla funzione non è specificato, si assume che il tipo sia <code>int</code> per default.</p>
+            <p>Una funzione di tipo <code>void</code> non restituisce alcun risultato alla funzione principale dove viene eseguita. Il risultato della funzione <code>void</code> non è reso disponibile per le altre funzioni del programma.</p>
+        </section>
+        <section class="slide-section">
+            <h2>L'elenco dei Parametri</h2>
+            <p>Ecco la sintassi generale per la definizione di una funzione:</p>
+            <pre><code>
+tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
+    istruzioni;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>I Parametri di Tipo void</h2>
+            <p><code>void f(void)</code> o <code>void f()</code> indica che nessun parametro viene passato alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione StampaProdotto</h2>
+            <p>Il programma rappresenta la definizione di una funzione:</p>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+            </code></pre>
+            <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Sintassi delle Funzioni</h2>
+            <pre><code>
+void StampaProdotto (int a, int b) {
+    int P;
+    P = a * b;
+    cout << P << endl;
+}
+
+int Prodotto (int a, int b) {
+    int P;    
+    P = a * b;
+    return P;
+}
+            </code></pre>
+            <p>Le mele intere rappresentano i parametri <code>a</code> e <code>b</code>. Il risultato <code>P</code> non viene reso disponibile per le altre funzioni bensì viene visualizzato sullo schermo.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Differenze tra Funzioni</h2>
+            <p>La funzione <code>int Prodotto (int a, int b)</code> restituisce un risultato numerico di tipo intero.</p>
+            <p>La funzione <code>void StampaProdotto (int a, int b)</code> NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. Tuttavia, può visualizzare il risultato sullo schermo.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Domande</h2>
+            <p>Adesso che hai appreso il significato di <code>void</code> e il modo in cui viene costruita una funzione, considera il seguente codice e rispondi alle domande successive:</p>
+            <pre><code>
+void Stampa() {
+    cout << "stampa di prova" << endl;
+    cout << "fine della funzione" << endl;
+}
+            </code></pre>
+            <p>Cosa rappresenta il codice della slide precedente?</p>
+            <ul>
+                <li>una funzione</li>
+                <li>una variabile</li>
+            </ul>
+            <p>Cosa significa “<code>void</code>” nell’intestazione: <code>void Stampa ()</code>?</p>
+            <p>Ti ricordo che <code>cout <<</code> significa “visualizza sullo schermo”. L’istruzione <code>cout << "stampa di prova"</code> serve per visualizzare sullo schermo il messaggio: "stampa di prova".</p>
+        </section>
+        <section class="slide-section">
+            <h2>La Chiamata di una Funzione</h2>
+            <p>“Chiamare” una funzione significa eseguirla. Per eseguire una funzione basta utilizzare la seguente sintassi:</p>
+            <pre><code>
+nomeFunzione(elenco dei valori da passare ai parametri);
+            </code></pre>
+            <p>In pratica viene eseguita come se fosse un semplice comando. Al momento della chiamata, il compilatore esegue il controllo di corrispondenza tra i parametri specificati nella definizione della funzione e i valori passati alla funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzione Somma</h2>
+            <p>Nel seguente codice è presente:</p>
+            <ul>
+                <li>la dichiarazione delle variabili <code>totale</code>, <code>subtot1</code> e <code>subtot2</code></li>
+                <li>la chiamata della funzione <code>Somma</code></li>
+                <li>l’assegnazione del risultato della funzione <code>Somma</code> alla variabile <code>totale</code></li>
+            </ul>
+            <pre><code>
+int totale;
+int subtot1;
+int subtot2;
+...
+totale = Somma(subtot1, subtot2);
+...
+            </code></pre>
+            <p>Che tipo di risultato (dato) viene restituito dalla funzione <code>Somma</code>?</p>
+            <ul>
+                <li>numerico</li>
+                <li>stringa</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>La Funzione Main</h2>
+            <p>È la funzione che viene eseguita per prima all'avvio del programma. Nella main direttamente o indirettamente vengono chiamate tutte le altre funzioni.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Esempio 1</h2>
+            <p>CHE COSA IMPARERAI CON QUESTO ESEMPIO:</p>
+            <ul>
+                <li>Organizzare un programma in sottoprogrammi individuando i moduli funzionalmente indipendenti</li>
+                <li>Utilizzare le funzioni del linguaggio C#</li>
+            </ul>
+            <p>Per esempio, immaginate di dover sviluppare un gioco di quiz in cui il giocatore deve rispondere a domande a scelta multipla.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Funzioni del Gioco</h2>
+            <ul>
+                <li>Funzione <code>IniziaGioco()</code>: Questa funzione può essere utilizzata per impostare il gioco, inizializzare le variabili e mostrare un messaggio di benvenuto.</li>
+                <li>Funzione <code>RiceviRisposta()</code>: Questa funzione attende che l'utente inserisca una risposta e la restituisce.</li>
+                <li>Funzione <code>AggiornaPunteggio(ref int punteggio, bool esatto)</code>: Aggiorna il punteggio dell'utente in base alla correttezza della risposta.</li>
+                <li>Funzione <code>FineGioco(int punteggio)</code>: Visualizza il punteggio finale e conclude il gioco.</li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione</h2>
+            <p><code>IniziaGioco()</code>: FUNZIONE che avvia il gioco (implementazione non mostrata).</p>
+            <p><code>int punteggio = 0;</code>: Dichiarazione e inizializzazione della variabile punteggio.</p>
+            <p><code>MostraDomanda(0);</code>: FUNZIONE Mostra la prima domanda (implementazione non mostrata).</p>
+            <p><code>string risposta = RiceviRisposta();</code>: DICHIARAZIONE DELLA VARIABILE RISPOSTA CHIAMATA DELLA FUNZIONE <code>RiceviRisposta();</code>: IL CUI RISULTATO VIENE ASSEGNATO (<code>=</code>) ALLA VARIABILE risposta.</p>
+            <p>Questo esempio dimostra come usare e aggiornare una variabile globale senza l'utilizzo di un ciclo <code>for</code>.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Globale</h2>
+            <p>Definizione: Una variabile globale è una variabile dichiarata al di fuori di qualsiasi funzione, metodo, costruttore o blocco. È accessibile e modificabile da qualsiasi parte del programma.</p>
+            <p>Utilizzo: Le variabili globali vengono utilizzate quando è necessario mantenere uno stato o condividere dati tra diverse parti di un programma senza dover passare i dati come argomenti di funzione.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Le Variabili Globali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Facilita la condivisione di dati tra funzioni e moduli.</li>
+                        <li>Riduce la necessità di passare parametri tra funzioni.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Può portare a conflitti di nome e difficoltà nel debug.</li>
+                        <li>Rende il codice meno modulare e più difficile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="slide-section">
+            <h2>Spiegazione del Codice</h2>
+            <p>Dichiarazione della Variabile Globale:</p>
+            <pre><code>
+static int punteggio = 0;
+            </code></pre>
+            <p>La variabile punteggio è dichiarata come statica e inizializzata a 0.</p>
+            <p>Utilizzo nel Metodo Main:</p>
+            <pre><code>
+Console.WriteLine("Valore iniziale del punteggio: " + punteggio);
+IncrementaPunteggio();
+Console.WriteLine("Valore del punteggio dopo incremento: " + punteggio);
+            </code></pre>
+            <p>Metodo per Incrementare il Punteggio:</p>
+            <pre><code>
+static void IncrementaPunteggio() {
+    punteggio++;
+}
+            </code></pre>
+        </section>
+        <section class="slide-section">
+            <h2>Cos'è una Variabile Locale</h2>
+            <p>Definizione: Una variabile locale è una variabile che è accessibile solo all'interno della funzione, metodo o blocco in cui è stata dichiarata.</p>
+            <p>Ambito di Applicazione: Le variabili locali sono dichiarate all'interno di funzioni, metodi o blocchi e sono visibili solo in quell'ambito.</p>
+        </section>
+        <section class="slide-section">
+            <h2>Vantaggi e Svantaggi delle Variabili Locali</h2>
+            <ul>
+                <li>Vantaggi:
+                    <ul>
+                        <li>Migliorano la modularità del codice e riducono il rischio di conflitti di nomi poiché la loro visibilità è limitata.</li>
+                    </ul>
+                </li>
+                <li>Svantaggi:
+                    <ul>
+                        <li>Non possono essere utilizzate al di fuori del loro ambito di dichiarazione, il che richiede di passare i dati tramite parametri se necessario.</li>
+                    </ul>
+                </li>
+                <li>Best Practice:
+                    <ul>
+                        <li>È consigliato utilizzare variabili locali il più possibile per mantenere il codice organizzato e facile da mantenere.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Creato con un pizzico di magia Disney!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
