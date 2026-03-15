@@ -128,12 +128,13 @@ tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
         <section class="slide-section">
             <h2>Esempio: funzione di tipo "void"</h2>
             <p>Il programma rappresenta la definizione di una funzione:</p>
-            <pre><code>
-void StampaProdotto (int a, int b) {
-    int  P;
+           <pre> CODICE NEL LINGUAGGIO C#<code>
+void StampaProdotto(int a, int b)
+{
+    int P;
     P = a * b;
-    cout << P << endl;
-}
+    Console.WriteLine(P);
+}   /* C# */
             </code></pre>
             <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
             <p>Questa funzione NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. </p> 
@@ -141,8 +142,9 @@ void StampaProdotto (int a, int b) {
         <section class="slide-section">
             <h2>L'istruzione "return"</h2>
             <pre><code>
-int Prodotto (int a, int b) {
-    int P;    
+......int Prodotto(int a, int b)  /* I PUNTINI INDICANO L'EVENTUALE PRESENZA DI ALTRE PAROLE CHIAVE*/
+{
+    int P;
     P = a * b;
     return P;
 }
@@ -158,9 +160,10 @@ int Prodotto (int a, int b) {
             <h2>Domande</h2>
             <p>Adesso che hai appreso il significato di <code>void</code> e il modo in cui viene costruita una funzione, considera il seguente codice e rispondi alle domande successive:</p>
             <pre><code>
-void Stampa() {
-    cout << "stampa di prova" << endl;
-    cout << "fine della funzione" << endl;
+......void Stampa()
+{
+    Console.WriteLine("stampa di prova");
+    Console.WriteLine("fine della funzione");
 }
             </code></pre>
             <p>Cosa rappresenta il codice della slide precedente?</p>
