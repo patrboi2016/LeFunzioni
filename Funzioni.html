@@ -129,16 +129,16 @@ tipoFunzione nomeFunzione(tipo1 nome1, tipo2 nome2, ...) {
             <h2>Esempio: funzione di tipo "void"</h2>
             <p>Il programma rappresenta la definizione di una funzione:</p>
            <pre> CODICE NEL LINGUAGGIO C#<code>
-void StampaProdotto(int a, int b)
+void acquisisciNome()
 {
-    int P;
-    P = a * b;
-    Console.WriteLine(P);
-}   /* C# */
+    Console.Write("Inserisci il tuo nome: ");  //acquisisce il nome  da tastiera//
+    string s = Console.ReadLine();
+    Console.WriteLine("Il tuo nome è: " + s);
+}
             </code></pre>
             <p>Riconosciamo che si tratta di una definizione perché è presente tutto il suo codice tra le parentesi graffe.</p>
             <p>Questa funzione NON restituisce nessun risultato. Infatti, <code>void</code> significa “vuoto”. </p> 
-            <p> Essa visualizza il risultato sullo schermo grazie all'istruzione <code> cout << P << endl;</code></p>                  </section>
+            <p> Essa visualizza il risultato sullo schermo grazie all'istruzione <code> Console.WriteLine() endl;</code></p>                  </section>
         <section class="slide-section">
             <h2>L'istruzione "return"</h2>
             <pre><code>
